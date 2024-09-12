@@ -8,6 +8,8 @@ sys.path.append(os.path.join(parent_folder_path, 'plugin'))
 
 from flowlauncher import FlowLauncher
 from plugin.keycode import *
+import pyperclip
+
 
 class KeyCodeLauncher(FlowLauncher):
     
@@ -21,7 +23,7 @@ class KeyCodeLauncher(FlowLauncher):
                 full_items.append(
                     {
                         "Title": "KeyCode: {}, value: {}".format(key,value),
-                        "SubTitle": "Press enter to copy value",
+                        "SubTitle": "Press enter to copy adb shell command to clipboard",
                         "IcoPath": "Images/app.png",
                         "JsonRPCAction": {
                             "method": "copy_value",
@@ -45,9 +47,9 @@ class KeyCodeLauncher(FlowLauncher):
         return [    
         ]
 
-    def copy_value(self, url):
-        # webbrowser.open(url)
-        pass
+    def copy_value(self, text):
+        cmd="adb shell input keyevent {}".format(text)
+        pyperclip.copy(cmd)
 
 if __name__ == "__main__":
     KeyCodeLauncher()
