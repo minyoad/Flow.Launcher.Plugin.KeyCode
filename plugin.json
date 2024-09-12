@@ -1,0 +1,12 @@
+{
+    "ID": "0bef8896-b690-48f4-9a59-558099a49955",
+    "ActionKeyword": "key",
+    "Name": "KeyCode Plugin for Flow Launcher",
+    "Description": "Android KeyCode Plugin for Flow Launcher",
+    "Author": "minyoad",
+    "Version": "1.0.0",
+    "Language": "python",
+    "Website": "https://github.com/minyoad/Flow.Launcher.Plugin.KeyCode",
+    "IcoPath": "Images\\app.png",
+    "ExecuteFileName": "main.py"
+}
